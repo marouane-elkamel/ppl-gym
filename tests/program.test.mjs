@@ -30,3 +30,15 @@ test("every exercise has both photos on disk", () => {
     .filter((path) => !existsSync(new URL(path, root)));
   assert.deepEqual(missing, []);
 });
+
+test("every exercise has a video with a thumbnail on disk", () => {
+  const problems = Object.entries(EXERCISES).flatMap(([key, ex]) => {
+    if (!ex.video?.id) return [`${key}: no video`];
+    const issues = [];
+    if (!/^[\w-]{11}$/.test(ex.video.id)) issues.push(`${key}: odd video id ${ex.video.id}`);
+    if (!ex.video.title || !ex.video.channel) issues.push(`${key}: video missing title or channel`);
+    if (!existsSync(new URL(`${IMG_DIR}yt/${ex.video.id}.jpg`, root))) issues.push(`${key}: thumbnail missing`);
+    return issues;
+  });
+  assert.deepEqual(problems, []);
+});

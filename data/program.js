@@ -5,6 +5,11 @@ export const IMG_DIR = "img/";
 
 export const EXERCISES = {
   "chest_press": {
+    "video": {
+      "id": "pLofEAcfsO8",
+      "title": "Machine Chest Press | Proper Form Tutorial for a Stronger Chest",
+      "channel": "FIT.nl"
+    },
     "name": "Machine Chest Press",
     "dbId": "Leverage_Chest_Press",
     "muscles": "Chest, front shoulders, triceps",
@@ -24,6 +29,11 @@ export const EXERCISES = {
     "swap": "Smith Machine Bench Press, or Dumbbell Bench Press with light dumbbells."
   },
   "incline_press": {
+    "video": {
+      "id": "LiDArz1R2NU",
+      "title": "Incline Machine Chest Press | Proper Form Tutorial for Upper Chest",
+      "channel": "FIT.nl"
+    },
     "name": "Incline Machine Press",
     "dbId": "Leverage_Incline_Chest_Press",
     "muscles": "Upper chest, front shoulders, triceps",
@@ -41,6 +51,11 @@ export const EXERCISES = {
     "swap": "Smith Machine Incline Press, or Incline Dumbbell Press."
   },
   "shoulder_press": {
+    "video": {
+      "id": "BAZkFGeUy5U",
+      "title": "Shoulder Press Machine | Tutorial for Gym Beginners",
+      "channel": "Tim Bullici"
+    },
     "name": "Machine Shoulder Press",
     "dbId": "Leverage_Shoulder_Press",
     "muscles": "Shoulders, triceps",
@@ -59,6 +74,11 @@ export const EXERCISES = {
     "swap": "Seated Dumbbell Shoulder Press (back supported)."
   },
   "pec_deck": {
+    "video": {
+      "id": "hZ0CGRaKwbQ",
+      "title": "Pec Deck / Chest Fly: How To",
+      "channel": "Hammer Fitness"
+    },
     "name": "Pec Deck (Machine Fly)",
     "dbId": "Butterfly",
     "muscles": "Chest",
@@ -76,6 +96,11 @@ export const EXERCISES = {
     "swap": "Cable Crossover (standing between two high cables)."
   },
   "lateral_raise": {
+    "video": {
+      "id": "3VcKaXpzqRo",
+      "title": "How To: Dumbbell Side Lateral Raise",
+      "channel": "ScottHermanFitness"
+    },
     "name": "Dumbbell Lateral Raise",
     "dbId": "Side_Lateral_Raise",
     "muscles": "Side shoulders (makes shoulders look wider)",
@@ -94,6 +119,11 @@ export const EXERCISES = {
     "swap": "Cable Lateral Raise, or the Lateral Raise machine."
   },
   "rope_pushdown": {
+    "video": {
+      "id": "vPeQu_L-1n0",
+      "title": "How to Do Tricep Pushdowns with a Rope (Step-by-Step Breakdown)",
+      "channel": "REP"
+    },
     "name": "Rope Triceps Pushdown",
     "dbId": "Triceps_Pushdown_-_Rope_Attachment",
     "muscles": "Triceps (back of the arm)",
@@ -111,6 +141,11 @@ export const EXERCISES = {
     "swap": "Straight-bar pushdown, or the Triceps Extension machine."
   },
   "plank": {
+    "video": {
+      "id": "A2b2EmIg0dA",
+      "title": "How To Plank (Proper Form | Cues | Progressions)",
+      "channel": "E3 Rehab"
+    },
     "name": "Plank",
     "dbId": "Plank",
     "muscles": "Core (abs and lower back)",
@@ -129,6 +164,11 @@ export const EXERCISES = {
     "swap": "Dead Bug (lying on your back, slowly lowering opposite arm and leg)."
   },
   "lat_pulldown": {
+    "video": {
+      "id": "CAwf7n6Luuc",
+      "title": "How To: Lat Pulldown | 3 GOLDEN RULES",
+      "channel": "ScottHermanFitness"
+    },
     "name": "Wide-Grip Lat Pulldown",
     "dbId": "Wide-Grip_Lat_Pulldown",
     "muscles": "Lats (back width), biceps",
@@ -147,6 +187,11 @@ export const EXERCISES = {
     "swap": "Assisted Pull-Up machine, or Close-Grip Lat Pulldown."
   },
   "cable_row": {
+    "video": {
+      "id": "f_r95UajQcg",
+      "title": "How to Do a Seated Cable Row",
+      "channel": "REP"
+    },
     "name": "Seated Cable Row",
     "dbId": "Seated_Cable_Rows",
     "muscles": "Middle back, lats, biceps",
@@ -165,6 +210,11 @@ export const EXERCISES = {
     "swap": "Chest-supported Machine Row."
   },
   "db_row": {
+    "video": {
+      "id": "nMFCMNKnLgQ",
+      "title": "How to Perform Single Arm Dumbbell Rows | Back Size Exercise Tutorial",
+      "channel": "Buff Dudes Workouts"
+    },
     "name": "One-Arm Dumbbell Row",
     "dbId": "One-Arm_Dumbbell_Row",
     "muscles": "Lats, middle back, biceps",
@@ -184,6 +234,11 @@ export const EXERCISES = {
     "swap": "Machine Row."
   },
   "reverse_pec_deck": {
+    "video": {
+      "id": "v0rJuhEa59c",
+      "title": "Reverse Pec Deck Fly | Proper Form Tutorial for Rear Delts",
+      "channel": "FIT.nl"
+    },
     "name": "Reverse Pec Deck",
     "dbId": "Reverse_Machine_Flyes",
     "muscles": "Rear shoulders, upper back (good for posture)",
@@ -201,6 +256,11 @@ export const EXERCISES = {
     "swap": "Face Pull on a cable with a rope, or Cable Rear Delt Fly."
   },
   "preacher_curl": {
+    "video": {
+      "id": "to3m8zws1n8",
+      "title": "Machine Bicep Preacher Curl: How To",
+      "channel": "Hammer Fitness"
+    },
     "name": "Machine Preacher Curl",
     "dbId": "Machine_Preacher_Curls",
     "muscles": "Biceps",
@@ -218,6 +278,11 @@ export const EXERCISES = {
     "swap": "Dumbbell Bicep Curl, or Cable Curl."
   },
   "hammer_curl": {
+    "video": {
+      "id": "zC3nLlEvin4",
+      "title": "How To: Dumbbell Hammer Curl",
+      "channel": "ScottHermanFitness"
+    },
     "name": "Dumbbell Hammer Curl",
     "dbId": "Hammer_Curls",
     "muscles": "Biceps, forearms",
@@ -235,6 +300,11 @@ export const EXERCISES = {
     "swap": "Cable Rope Hammer Curl."
   },
   "ab_crunch": {
+    "video": {
+      "id": "0kLWho-pEdQ",
+      "title": "Machine Ab Crunch: How To",
+      "channel": "Hammer Fitness"
+    },
     "name": "Ab Crunch Machine",
     "dbId": "Ab_Crunch_Machine",
     "muscles": "Abs",
@@ -252,6 +322,11 @@ export const EXERCISES = {
     "swap": "Cable Crunch (kneeling, rope on the high pulley)."
   },
   "leg_press": {
+    "video": {
+      "id": "8nm863C0c60",
+      "title": "Proper Leg Press Form | Common Mistakes | Beginner’s Guide to Gym Machines",
+      "channel": "Tim Bullici"
+    },
     "name": "Leg Press",
     "dbId": "Leg_Press",
     "muscles": "Quads, glutes, hamstrings",
@@ -271,6 +346,11 @@ export const EXERCISES = {
     "swap": "Hack Squat, or Smith Machine Squat."
   },
   "goblet_squat": {
+    "video": {
+      "id": "k_EhLGvM8TQ",
+      "title": "How to Perform Goblet Squats | Beginner Squat Exercise Tutorial",
+      "channel": "Buff Dudes Workouts"
+    },
     "name": "Goblet Squat",
     "dbId": "Goblet_Squat",
     "muscles": "Quads, glutes, core",
@@ -290,6 +370,11 @@ export const EXERCISES = {
     "swap": "Smith Machine Squat."
   },
   "leg_curl": {
+    "video": {
+      "id": "_2Kd0d-JEUM",
+      "title": "How to do a Seated Leg Curl  | Proper Form & Technique | NASM",
+      "channel": "National Academy of Sports Medicine (NASM)"
+    },
     "name": "Seated Leg Curl",
     "dbId": "Seated_Leg_Curl",
     "muscles": "Hamstrings (back of the thigh)",
@@ -307,6 +392,11 @@ export const EXERCISES = {
     "swap": "Lying Leg Curl machine."
   },
   "leg_extension": {
+    "video": {
+      "id": "xAUvXdHu1sI",
+      "title": "How to do the LEG EXTENSION properly (in just 80 seconds)",
+      "channel": "Tim Bullici"
+    },
     "name": "Leg Extension",
     "dbId": "Leg_Extensions",
     "muscles": "Quads (front of the thigh)",
@@ -323,6 +413,11 @@ export const EXERCISES = {
     "swap": "Single-leg Leg Extension, or Dumbbell Split Squat."
   },
   "db_rdl": {
+    "video": {
+      "id": "aa57T45iFSE",
+      "title": "How to do a Dumbbell Romanian Deadlift | Proper Form & Technique | NASM",
+      "channel": "National Academy of Sports Medicine (NASM)"
+    },
     "name": "Dumbbell Romanian Deadlift",
     "dbId": "Stiff-Legged_Dumbbell_Deadlift",
     "muscles": "Hamstrings, glutes, lower back",
@@ -342,6 +437,11 @@ export const EXERCISES = {
     "swap": "Smith Machine Stiff-Legged Deadlift."
   },
   "hip_abductor": {
+    "video": {
+      "id": "5O_Y9l__iao",
+      "title": "Seated Hip Abduction Machine: How To",
+      "channel": "Hammer Fitness"
+    },
     "name": "Hip Abductor Machine",
     "dbId": "Thigh_Abductor",
     "muscles": "Outer glutes (hip stability)",
@@ -359,6 +459,11 @@ export const EXERCISES = {
     "swap": "Cable Hip Abduction, or band side-walks."
   },
   "seated_calf": {
+    "video": {
+      "id": "ORY-ke6vcgk",
+      "title": "Seated Calf Raise Tutorial - Proper Form and Technique",
+      "channel": "Runna"
+    },
     "name": "Seated Calf Raise",
     "dbId": "Seated_Calf_Raise",
     "muscles": "Calves",
@@ -376,6 +481,11 @@ export const EXERCISES = {
     "swap": "Calf Press on the Leg Press machine."
   },
   "warm_bike": {
+    "video": {
+      "id": "rlOOqDgDU3U",
+      "title": "How to Set Up Exercise Bike",
+      "channel": "DICK'S"
+    },
     "name": "Easy Bike or Elliptical",
     "dbId": "Bicycling_Stationary",
     "muscles": "Heart and legs: gets your body warm",
@@ -389,6 +499,11 @@ export const EXERCISES = {
     "swap": "Elliptical or rowing machine at an easy pace."
   },
   "arm_circles": {
+    "video": {
+      "id": "mwDgFY86zck",
+      "title": "Workout WARM-UP | ARM CIRCLES",
+      "channel": "The Hybrid Athlete"
+    },
     "name": "Arm Circles",
     "dbId": "Arm_Circles",
     "muscles": "Shoulders",
@@ -403,6 +518,11 @@ export const EXERCISES = {
     "swap": null
   },
   "shoulder_circles": {
+    "video": {
+      "id": "X7NtgY9kCCM",
+      "title": "How to do shoulder rolls",
+      "channel": "Rehab My Patient"
+    },
     "name": "Shoulder Circles",
     "dbId": "Shoulder_Circles",
     "muscles": "Shoulders, upper back",
@@ -417,6 +537,11 @@ export const EXERCISES = {
     "swap": null
   },
   "hip_circles": {
+    "video": {
+      "id": "JYqLwajOGjI",
+      "title": "Hip Circles Tutorial - Proper Form and Technique",
+      "channel": "Runna"
+    },
     "name": "Standing Hip Circles",
     "dbId": "Standing_Hip_Circles",
     "muscles": "Hips",
@@ -430,6 +555,11 @@ export const EXERCISES = {
     "swap": null
   },
   "glute_bridge": {
+    "video": {
+      "id": "nuapk_-Q2BI",
+      "title": "How To Do A Glute Bridge | Step By Step Instruction For Beginners",
+      "channel": "Dr. Carl Baird"
+    },
     "name": "Glute Bridge",
     "dbId": "Butt_Lift_Bridge",
     "muscles": "Glutes, hamstrings",
@@ -444,6 +574,11 @@ export const EXERCISES = {
     "swap": null
   },
   "incline_walk": {
+    "video": {
+      "id": "8t2rLG0RL34",
+      "title": "30 Minute Incline Walking Treadmill Workout | Supports Fat Loss | Great for Beginners | 1",
+      "channel": "Treadchic"
+    },
     "name": "Incline Treadmill Walk",
     "dbId": "Walking_Treadmill",
     "muscles": "Heart and fat burning, plus glutes and calves",
@@ -462,6 +597,11 @@ export const EXERCISES = {
     "swap": "Stairmaster at a slow pace, or elliptical."
   },
   "bike": {
+    "video": {
+      "id": "rEqRmKAQ5xM",
+      "title": "20 min Stationary Bike Workout for Beginners",
+      "channel": "Kaleigh Cohen Cycling"
+    },
     "name": "Bike (moderate)",
     "dbId": "Recumbent_Bike",
     "muscles": "Heart and fat burning, easy on tired legs",
@@ -478,6 +618,11 @@ export const EXERCISES = {
     "swap": "Elliptical."
   },
   "shoulder_stretch": {
+    "video": {
+      "id": "riVxa9By-pM",
+      "title": "How To Do Band Dislocates / Pass-Throughs (Shoulder Mobility)",
+      "channel": "66 Days Fitness Coaching"
+    },
     "name": "Shoulder Dislocates (towel)",
     "dbId": "Round_The_World_Shoulder_Stretch",
     "muscles": "Shoulders, chest",
@@ -494,6 +639,11 @@ export const EXERCISES = {
     "swap": null
   },
   "cat_stretch": {
+    "video": {
+      "id": "xyNwxiuERXc",
+      "title": "Cat–Cow Stretch | Proper Form Tutorial for Spinal Mobility",
+      "channel": "FIT.nl"
+    },
     "name": "Cat-Cow Back Stretch",
     "dbId": "Cat_Stretch",
     "muscles": "Back",
@@ -509,6 +659,11 @@ export const EXERCISES = {
     "swap": null
   },
   "hip_flexor": {
+    "video": {
+      "id": "6o-GpPIGR5w",
+      "title": "Kneeling Hip Flexor Stretch Tutorial - Proper Form and Technique",
+      "channel": "Runna"
+    },
     "name": "Hip Flexor Stretch",
     "dbId": "Standing_Hip_Flexors",
     "muscles": "Front of the hips",
@@ -523,6 +678,11 @@ export const EXERCISES = {
     "swap": null
   },
   "hamstring_stretch": {
+    "video": {
+      "id": "D8dJ9K7SIiE",
+      "title": "Seated Hamstring Stretch",
+      "channel": "Ann & Robert H. Lurie Children's Hospital of Chicago"
+    },
     "name": "Seated Hamstring Stretch",
     "dbId": "Seated_Hamstring_and_Calf_Stretch",
     "muscles": "Hamstrings, calves",
@@ -537,6 +697,11 @@ export const EXERCISES = {
     "swap": null
   },
   "calf_stretch": {
+    "video": {
+      "id": "GTOBvb45lgg",
+      "title": "Standing Calf Stretch Tutorial - Proper Form and Technique",
+      "channel": "Runna"
+    },
     "name": "Wall Calf Stretch",
     "dbId": "Calf_Stretch_Hands_Against_Wall",
     "muscles": "Calves",

@@ -73,8 +73,40 @@ function photos(key) {
   </div>`;
 }
 
+/** Video card: a local thumbnail that only loads YouTube once it is tapped. */
+function video(ex) {
+  if (!ex.video) return "";
+  const search = `https://www.youtube.com/results?search_query=${encodeURIComponent(`${ex.name} how to proper form`)}`;
+  return `
+    <div class="video">
+      <button type="button" class="video-play" data-video="${esc(ex.video.id)}" aria-label="Play: ${esc(ex.video.title)}">
+        <img src="${IMG_DIR}yt/${esc(ex.video.id)}.jpg" alt="" loading="lazy">
+        <span class="video-icon" aria-hidden="true">▶</span>
+      </button>
+      <div class="video-meta">
+        <div class="video-title">${esc(ex.video.title)}</div>
+        <div class="muted small">${esc(ex.video.channel)} · YouTube</div>
+      </div>
+    </div>
+    <a class="video-more muted small" href="${esc(search)}" target="_blank" rel="noopener noreferrer">🔍 More videos for this exercise</a>`;
+}
+
+/** Swap a tapped thumbnail for the real player. */
+function playVideo(button) {
+  const id = button.dataset.video;
+  const frame = document.createElement("iframe");
+  frame.className = "video-frame";
+  frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&playsinline=1`;
+  frame.title = button.getAttribute("aria-label").replace(/^Play: /, "");
+  frame.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+  frame.allowFullscreen = true;
+  frame.referrerPolicy = "strict-origin-when-cross-origin";
+  button.replaceWith(frame);
+}
+
 function howTo(ex, openSteps = false) {
   return `
+    ${video(ex)}
     ${ex.setup ? `<details><summary>⚙️ Setup</summary><p>${esc(ex.setup)}</p></details>` : ""}
     <details ${openSteps ? "open" : ""}><summary>▶️ How to</summary>
       <ol>${ex.steps.map((step) => `<li>${esc(step)}</li>`).join("")}</ol>
@@ -226,6 +258,7 @@ function renderItem(s, key, { keepScroll = false } = {}) {
     const target = event.target.closest("[data-action]");
     const action = target?.dataset.action;
     if (action === "finish") return finishWorkout(s);
+    if (event.target.closest("[data-video]")) return playVideo(event.target.closest("[data-video]"));
     if (action === "tick") return tickSet(item.lift, session, target.closest("[data-set]"), rerender);
     if (action === "toggle-done") {
       store.update(() => {

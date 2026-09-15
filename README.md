@@ -2,7 +2,7 @@
 
 **Live app: <https://marouane-elkamel.github.io/ppl-gym/>**
 
-A phone-first web app for a 3-day Push / Pull / Legs beginner program, mostly on machines. Pick a day, then work through warm-up → 7 exercises → cardio → cool-down. Every exercise has photos and instructions. Log kg and reps for each set, a rest timer starts after each one, and your progress is charted over time.
+A phone-first web app for a 3-day Push / Pull / Legs beginner program, mostly on machines. Pick a day, then work through warm-up → 7 exercises → cardio → cool-down. Every exercise has photos, written instructions and a video tutorial. Log kg and reps for each set, a rest timer starts after each one, and your progress is charted over time.
 
 - Static files only: no build step, no backend, no dependencies.
 - Works offline once opened, and you can add it to your home screen.
@@ -35,8 +35,9 @@ On your phone, open the URL, then **Share → Add to Home Screen** (iPhone) or *
 
 ## Changing the program
 
-- Edit `data/program.js` (exercises, sets, reps, rest times, instructions).
-- If you add exercises, run `python3 tools/fetch_images.py` to download their photos. The `dbId` must be a folder name from [free-exercise-db](https://github.com/yuhonas/free-exercise-db/tree/main/exercises).
-- Bump `CACHE` in `sw.js` (e.g. `ppl-v2`) so installed apps pick up the change.
+- Edit `data/program.js` (exercises, sets, reps, rest times, instructions, videos).
+- If you add exercises or change a video, run `python3 tools/fetch_images.py` to download the photos and video thumbnails. A `dbId` must be a folder name from [free-exercise-db](https://github.com/yuhonas/free-exercise-db/tree/main/exercises); a `video.id` is the `v=` part of a YouTube URL.
+- `python3 tools/check_videos.py` checks that every video still plays and can be embedded, and prints its real title and channel. Run it if a video card looks wrong.
+- Bump `CACHE` in `sw.js` (e.g. `ppl-v5`) so installed apps pick up the change.
 
-Exercise photos: free-exercise-db, public domain (Unlicense).
+Exercise photos: free-exercise-db, public domain (Unlicense). Videos are embedded from YouTube (youtube-nocookie.com) and belong to their creators; nothing is contacted until you tap play.
