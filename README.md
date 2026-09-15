@@ -1,5 +1,7 @@
 # PPL Gym
 
+**Live app: <https://marouane-elkamel.github.io/ppl-gym/>**
+
 A phone-first web app for a 3-day Push / Pull / Legs beginner program, mostly on machines. Pick a day, then work through warm-up → 7 exercises → cardio → cool-down. Every exercise has photos and instructions. Log kg and reps for each set, a rest timer starts after each one, and your progress is charted over time.
 
 - Static files only: no build step, no backend, no dependencies.
