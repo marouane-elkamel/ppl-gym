@@ -1,6 +1,6 @@
 // Offline support: precache the app and every exercise photo.
 // Bump CACHE when you change files so phones pick up the new version.
-const CACHE = "ppl-v2";
+const CACHE = "ppl-v3";
 
 const SHELL = [
   "./",
@@ -21,9 +21,10 @@ const SHELL = [
 self.addEventListener("install", (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
-    await cache.addAll(SHELL);
-    const images = await (await fetch("img/index.json")).json();
-    await cache.addAll(images);
+    // cache: "reload" so a CACHE bump really re-fetches, past the browser's HTTP cache.
+    const fresh = (paths) => cache.addAll(paths.map((p) => new Request(p, { cache: "reload" })));
+    await fresh(SHELL);
+    await fresh(await (await fetch("img/index.json", { cache: "reload" })).json());
     await self.skipWaiting();
   })());
 });

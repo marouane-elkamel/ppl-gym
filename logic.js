@@ -81,7 +81,7 @@ export function suggestNextTab(data, order, today) {
 }
 
 export function needsBackupReminder(data, nowMs) {
-  if (!data.sessions.length) return false;
+  if (!data.sessions.some(hasActivity)) return false;
   return !data.lastExportAt || nowMs - data.lastExportAt > 14 * DAY_MS;
 }
 

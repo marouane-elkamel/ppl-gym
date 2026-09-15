@@ -100,10 +100,11 @@ test("suggestNextTab continues today's open session, else the day after the late
 test("needsBackupReminder after 14 days without export, once there is data", () => {
   const day = 864e5;
   const now = 100 * day;
+  const logged = () => session({ items: { chest_press: { sets: [set(30, 10)] } } });
   assert.equal(needsBackupReminder(data(), now), false);
-  assert.equal(needsBackupReminder(data([session()]), now), true);
-  assert.equal(needsBackupReminder(data([session()], { lastExportAt: now - 15 * day }), now), true);
-  assert.equal(needsBackupReminder(data([session()], { lastExportAt: now - day }), now), false);
+  assert.equal(needsBackupReminder(data([logged()]), now), true);
+  assert.equal(needsBackupReminder(data([logged()], { lastExportAt: now - 15 * day }), now), true);
+  assert.equal(needsBackupReminder(data([logged()], { lastExportAt: now - day }), now), false);
 });
 
 test("validateBackup rejects bad shapes and accepts app data", () => {
@@ -147,4 +148,9 @@ test("hasActivity, sessionVolume, lastDoneEntry and shortDate", async () => {
   assert.deepEqual(lastDoneEntry(data([opened, worked]), "push", "cardio", "other"), { minutes: 20, setting: 10, done: true });
   assert.equal(lastDoneEntry(data([opened, worked]), "push", "cardio", "w"), null);
   assert.equal(shortDate("2026-09-05"), "5 Sep");
+});
+
+test("needsBackupReminder ignores sessions with nothing logged", () => {
+  const browsed = session({ items: { chest_press: { sets: [set(null, null, false)] } } });
+  assert.equal(needsBackupReminder(data([browsed]), 100 * 864e5), false);
 });
