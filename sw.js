@@ -1,6 +1,6 @@
 // Offline support: precache the app and every exercise photo.
 // Bump CACHE when you change files so phones pick up the new version.
-const CACHE = "ppl-v1";
+const CACHE = "ppl-v2";
 
 const SHELL = [
   "./",

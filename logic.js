@@ -73,7 +73,8 @@ export function beatsLast(set, lastSets, track) {
 }
 
 export function suggestNextTab(data, order, today) {
-  const latest = [...data.sessions].sort(newestFirst)[0];
+  // Sessions created by only browsing a day don't count as work done.
+  const latest = data.sessions.filter(hasActivity).sort(newestFirst)[0];
   if (!latest) return order[0];
   if (!latest.finishedAt && latest.date === today) return latest.tab;
   return order[(order.indexOf(latest.tab) + 1) % order.length];

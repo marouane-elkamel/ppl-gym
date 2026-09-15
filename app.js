@@ -120,7 +120,8 @@ function renderHome() {
 
   const cards = SESSIONS.map((s) => {
     const last = data.sessions.filter((x) => x.tab === s.id && hasActivity(x)).sort((a, b) => b.startedAt - a.startedAt)[0];
-    const inProgress = store.activeSession(s.id, today);
+    const open = store.activeSession(s.id, today);
+    const inProgress = open && hasActivity(open);
     const badge = s.id === next ? `<span class="badge">${inProgress ? "In progress" : "Next up"}</span>` : "";
     return `
       <a class="day-card ${s.id === next ? "next" : ""}" href="#/day/${s.id}" style="--accent:${s.color}">

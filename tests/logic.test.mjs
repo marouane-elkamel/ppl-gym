@@ -76,18 +76,24 @@ test("beatsLast by heavier kg, or more reps at last time's best kg", () => {
 test("suggestNextTab continues today's open session, else the day after the latest", () => {
   const order = ["push", "pull", "legs"];
   const today = "2026-09-15";
+  const worked = (over) => session({ items: { chest_press: { sets: [set(30, 10)] } }, ...over });
   assert.equal(suggestNextTab(data(), order, today), "push");
   assert.equal(
-    suggestNextTab(data([session({ tab: "pull", date: today, finishedAt: null, startedAt: 9 })]), order, today),
+    suggestNextTab(data([worked({ tab: "pull", date: today, finishedAt: null, startedAt: 9 })]), order, today),
     "pull",
   );
   assert.equal(
-    suggestNextTab(data([session({ tab: "push", startedAt: 1 }), session({ tab: "legs", startedAt: 2 })]), order, today),
+    suggestNextTab(data([worked({ tab: "push", startedAt: 1 }), worked({ tab: "legs", startedAt: 2 })]), order, today),
     "push",
   );
   assert.equal(
-    suggestNextTab(data([session({ tab: "pull", date: "2026-09-10", finishedAt: null, startedAt: 3 })]), order, today),
+    suggestNextTab(data([worked({ tab: "pull", date: "2026-09-10", finishedAt: null, startedAt: 3 })]), order, today),
     "legs",
+  );
+  // A session created by only opening a day is ignored.
+  assert.equal(
+    suggestNextTab(data([worked({ tab: "push", startedAt: 1 }), session({ tab: "legs", date: today, finishedAt: null, startedAt: 9 })]), order, today),
+    "pull",
   );
 });
 
